@@ -99,8 +99,9 @@ input_features = preprocessing.StandardScaler().fit_transform(features)
 # (1) build layers
 # choose style of model
 model = tf.keras.Sequential()
-# 隐含层1设置16层，权重初始化方法设置为随机高斯分布
-# 加入正则化惩罚项
+# Hidden layer 1 is set to 16 layers, and the weight initialization method
+# is set to random Gaussian distribution
+# Add regularized penalties
 # model.add(layers.Dense(16, kernel_initializer='random_normal', kernel_regularizer=tf.keras.regularizers.l2(0.01)))
 # model.add(layers.Dense(32, kernel_initializer='random_normal', kernel_regularizer=tf.keras.regularizers.l2(0.01)))
 model.add(layers.Dense(1, kernel_initializer='random_normal', kernel_regularizer=tf.keras.regularizers.l2(0.01)))
